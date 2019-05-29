@@ -1,0 +1,10 @@
+== Definitions
+=== ResponseResult
+[options="header"]
+|===
+|Name|Description|Required|Schema|Default
+|code||false|integer (int32)|
+|message||false|string|
+|result||false|object|
+|===
+

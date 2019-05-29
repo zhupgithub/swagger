@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.beauxie.swagger.export.SwaggerExportTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.323 sec

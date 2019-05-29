@@ -1,0 +1,18 @@
+= springboot利用swagger构建api文档
+
+== Overview
+简单优雅的restfun风格
+
+=== Version information
+Version: 1.0
+
+=== URI scheme
+Host: 127.0.0.1:9001
+BasePath: /
+
+=== Tags
+
+* 算命相关接口: 算命相关接口
+* 角色相关的接口1111: 角色相关的接口
+
+

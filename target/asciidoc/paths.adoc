@@ -1,0 +1,269 @@
+== Resources
+=== 算命相关接口
+:hardbreaks:
+算命相关接口
+
+==== 获得算命报告
+----
+POST /DestinyController/getDestinyReport
+----
+
+===== Description
+:hardbreaks:
+获得算命报告
+
+===== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|QueryParameter|city|城市|false|string|
+|QueryParameter|country|国家|false|string|
+|QueryParameter|gender|微信用户性别|true|integer (int32)|
+|QueryParameter|headPhotoUrl|微信用户头像|true|string|
+|QueryParameter|id|微信id|false|integer (int32)|
+|QueryParameter|language|语言|false|string|
+|QueryParameter|nickName|微信用户昵称|true|string|
+|QueryParameter|phone|微信用户电话号码|false|string|
+|QueryParameter|province|省份|false|string|
+|===
+
+===== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|1|操作成功|No Content
+|2|服务器内部异常|No Content
+|200|OK|<<ResponseResult>>
+|201|Created|No Content
+|3|权限不足|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+===== Consumes
+
+* application/json;charset=UTF-8
+
+===== Produces
+
+* application/json;charset=UTF-8
+
+==== 上传算命图片，并且开始算命
+----
+POST /DestinyController/uploadDestiny
+----
+
+===== Description
+:hardbreaks:
+上传算命图片，并且开始算命
+
+===== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|QueryParameter|city|城市|false|string|
+|QueryParameter|country|国家|false|string|
+|QueryParameter|file|待算命图片|true|ref|
+|QueryParameter|gender|微信用户性别|true|integer (int32)|
+|QueryParameter|headPhotoUrl|微信用户头像|true|string|
+|QueryParameter|id|微信id|false|integer (int32)|
+|QueryParameter|language|语言|false|string|
+|QueryParameter|nickName|微信用户昵称|true|string|
+|QueryParameter|phone|微信用户电话号码|false|string|
+|QueryParameter|province|省份|false|string|
+|===
+
+===== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|1|操作成功|No Content
+|2|服务器内部异常|No Content
+|200|OK|<<ResponseResult>>
+|201|Created|No Content
+|3|权限不足|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+===== Consumes
+
+* multipart/form-data
+* application/json;charset=UTF-8
+
+===== Produces
+
+* application/json;charset=UTF-8
+
+=== 角色相关的接口1111
+:hardbreaks:
+角色相关的接口
+
+==== 添加角色Value
+----
+GET /roleController/addRole
+----
+
+===== Description
+:hardbreaks:
+添加角色Notes
+
+===== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|QueryParameter|roleId|roleId主键value|false|integer (int32)|
+|QueryParameter|roleName|角色名value|true|string|
+|QueryParameter|validate|有效期|false|string (date)|2018-12-22
+|QueryParameter|youxiao|是否有效|false|string|0000
+|===
+
+===== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|操作成功|<<ResponseResult>>
+|400|权限不足|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|服务器内部异常|No Content
+|===
+
+===== Produces
+
+* application/json;charset=UTF-8
+
+==== 通过roleId获得role
+----
+POST /roleController/getRoleById/{roleId}
+----
+
+===== Description
+:hardbreaks:
+通过roleId获得role  Notes
+
+===== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|roleId|角色id|false|integer (int32)|1
+|===
+
+===== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<ResponseResult>>
+|201|Created|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+===== Consumes
+
+* application/json
+
+===== Produces
+
+* application/json;charset=UTF-8
+
+==== 通过roleId获得role
+----
+GET /roleController/getRoleById/{roleId}
+----
+
+===== Description
+:hardbreaks:
+通过roleId获得role  Notes
+
+===== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|roleId|角色id|false|integer (int32)|1
+|===
+
+===== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<ResponseResult>>
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+===== Produces
+
+* application/json;charset=UTF-8
+
+==== 测试Value
+----
+GET /roleController/test
+----
+
+===== Description
+:hardbreaks:
+测试Notes
+
+===== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|QueryParameter|roleId|roleId主键value|false|integer (int32)|
+|QueryParameter|roleName|角色名value|true|string|
+|===
+
+===== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|操作成功|<<ResponseResult>>
+|201|Created|No Content
+|400|权限不足|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|服务器内部异常|No Content
+|===
+
+===== Produces
+
+* application/json;charset=UTF-8
+
+==== 通过roleId获得rol1e222
+----
+GET /roleController/getRoleById2
+----
+
+===== Description
+:hardbreaks:
+通过roleId获得role  Notes
+
+===== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|QueryParameter|roleId|角色id|false|integer (int32)|1
+|===
+
+===== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<ResponseResult>>
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+===== Consumes
+
+* application/json;charset=UTF-8
+
+===== Produces
+
+* application/json;charset=UTF-8
+
